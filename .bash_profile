@@ -1,5 +1,8 @@
 # .bash_profile
 
+# Shell format
+PS1='[\u:\w]$ '
+
 # Load .bashrc if it exists
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
@@ -7,7 +10,6 @@ fi
 
 # Environment variables
 export PATH=$PATH:$HOME/bin
-export PS1='[bash:\w]$ '
 
 # Aliases
 alias rm='rm -i'
