@@ -1,3 +1,13 @@
-export PATH=$PATH:/home/ec2/bin
-export EC2_HOME=/home/ec2
-export LANG=en_US.UTF-8
+# .bashrc
+# Executed for interactive non-login shells
+
+# Aliases
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+# ls coloring
+if [ "$TERM" != "dumb" ]; then
+        eval `dircolors -b`
+        alias ls='ls --color=auto'
+fi

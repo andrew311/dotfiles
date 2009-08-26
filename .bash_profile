@@ -1,26 +1,13 @@
 # .bash_profile
+# Executed for login shells
 
-# Shell format
-PS1='[\u:\w]$ '
+# Environment variables
+export PS1='[\u:\w]$ '
+export PATH=$HOME/bin:$PATH
+export LANG=en_US.UTF-8
+export TZ=UTC
 
 # Load .bashrc if it exists
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
-
-# Environment variables
-export PATH=$PATH:$HOME/bin
-
-# Aliases
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
-
-# ls coloring
-if [ "$TERM" != "dumb" ]; then
-        eval `dircolors -b`
-        alias ls='ls --color=auto'
-fi
-
-
-
