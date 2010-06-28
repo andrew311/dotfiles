@@ -1,11 +1,10 @@
 # .bash_profile
 # Executed for login shells
 
-# Environment variables
-export PS1='[\u:\w]$ '
-export PATH=$HOME/bin:$PATH
-export LANG=en_US.UTF-8
-export TZ=UTC
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+  export PATH="$HOME/bin:$PATH"
+fi
 
 # Load .bashrc if it exists
 if [ -f ~/.bashrc ]; then
