@@ -1,4 +1,4 @@
-set syntax on
+syntax on
 set autoindent
 
 set tabstop=2
