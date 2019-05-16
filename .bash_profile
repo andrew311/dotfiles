@@ -11,4 +11,8 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-PS1="\[\033[0;33m\][\!]\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\` \u@\h \w\e[0m\n$ "
+export PS1="\[\e[0;33m\][\!]\`if [[ \$? = "0" ]]; then echo \"\e[32m\"; else echo \"\e[31m\"; fi\` \u@\h \w\e[0m\n$ "
+
+function title {
+  echo -ne "\033]0;"$*"\007"
+}
