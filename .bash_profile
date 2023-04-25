@@ -1,6 +1,11 @@
 # .bash_profile
 # Executed for login shells
 
+# Add docker to path
+if [ -d "$HOME/.docker/bin" ] && [[ ":$PATH:" != *":$HOME/.docker/bin:"* ]]; then
+  export PATH="$PATH:$HOME/.docker/bin"
+fi
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] && [[ ":$PATH:" == *":$HOME/bin:"* ]]; then
   export PATH="$HOME/bin:$PATH"
